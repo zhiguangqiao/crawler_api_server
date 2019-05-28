@@ -13,30 +13,30 @@ class CountersController < ApplicationController
     render json: @counter
   end
 
-  # POST /counters
-  def create
-    @counter = Counter.new(counter_params)
+  # # POST /counters
+  # def create
+  #   @counter = Counter.new(counter_params)
 
-    if @counter.save
-      render json: @counter, status: :created, location: @counter
-    else
-      render json: @counter.errors, status: :unprocessable_entity
-    end
-  end
+  #   if @counter.save
+  #     render json: @counter, status: :created, location: @counter
+  #   else
+  #     render json: @counter.errors, status: :unprocessable_entity
+  #   end
+  # end
 
-  # PATCH/PUT /counters/1
-  def update
-    if @counter.update(counter_params)
-      render json: @counter
-    else
-      render json: @counter.errors, status: :unprocessable_entity
-    end
-  end
+  # # PATCH/PUT /counters/1
+  # def update
+  #   if @counter.update(counter_params)
+  #     render json: @counter
+  #   else
+  #     render json: @counter.errors, status: :unprocessable_entity
+  #   end
+  # end
 
-  # DELETE /counters/1
-  def destroy
-    @counter.destroy
-  end
+  # # DELETE /counters/1
+  # def destroy
+  #   @counter.destroy
+  # end
 
   private
     # Use callbacks to share common setup or constraints between actions.

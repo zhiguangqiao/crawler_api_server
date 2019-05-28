@@ -13,30 +13,30 @@ class CrawlersController < ApplicationController
     render json: @crawler
   end
 
-  # POST /crawlers
-  def create
-    @crawler = Crawler.new(crawler_params)
+  # # POST /crawlers
+  # def create
+  #   @crawler = Crawler.new(crawler_params)
 
-    if @crawler.save
-      render json: @crawler, status: :created, location: @crawler
-    else
-      render json: @crawler.errors, status: :unprocessable_entity
-    end
-  end
+  #   if @crawler.save
+  #     render json: @crawler, status: :created, location: @crawler
+  #   else
+  #     render json: @crawler.errors, status: :unprocessable_entity
+  #   end
+  # end
 
-  # PATCH/PUT /crawlers/1
-  def update
-    if @crawler.update(crawler_params)
-      render json: @crawler
-    else
-      render json: @crawler.errors, status: :unprocessable_entity
-    end
-  end
+  # # PATCH/PUT /crawlers/1
+  # def update
+  #   if @crawler.update(crawler_params)
+  #     render json: @crawler
+  #   else
+  #     render json: @crawler.errors, status: :unprocessable_entity
+  #   end
+  # end
 
-  # DELETE /crawlers/1
-  def destroy
-    @crawler.destroy
-  end
+  # # DELETE /crawlers/1
+  # def destroy
+  #   @crawler.destroy
+  # end
 
   private
     # Use callbacks to share common setup or constraints between actions.
