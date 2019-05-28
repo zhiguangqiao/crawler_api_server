@@ -1,0 +1,22 @@
+[
+    {
+        "name": "郑州二手房",
+        "shell_command": "curl https://zz.ke.com/ershoufang/ | egrep -o 共找到.+[0-9].+套 | egrep -o [0-9]+",
+        "desc": "郑州二 手房挂牌出售总数"
+    },
+    {
+        "name": "北京二手房",
+        "shell_command": "curl https://bj.ke.com/ershoufang/ | egrep -o 共找到.+[0-9].+套 | egrep -o [0-9]+",
+        "desc": "郑州二 手房挂牌出售总数"
+    },
+    {
+        "name": "北京招房",
+        "shell_command": "curl https://bj.zu.ke.com/zufang | egrep 已为您找到.+[0-9]+.+套 | egrep -o [0-9]+",
+        "desc": "郑州出租房挂牌总数"
+    },
+    {
+        "name": "郑州招租",
+        "shell_command": "curl https://zz.zu.ke.com/zufang | egrep 已为您找到.+[0-9]+.+套 | egrep -o [0-9]+",
+        "desc": "郑州出租房挂牌总数"
+    }
+]

@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 2019_04_05_024600) do
     t.string "desc"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["shell_command"], name: "index_crawlers_on_shell_command", unique: true
   end
 
 end
