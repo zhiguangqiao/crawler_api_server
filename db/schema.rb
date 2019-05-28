@@ -20,8 +20,7 @@ ActiveRecord::Schema.define(version: 2019_04_05_024600) do
   end
 
   create_table "crawlers", force: :cascade do |t|
-    t.string "expression"
-    t.string "url"
+    t.string "shell_command"
     t.string "name"
     t.string "desc"
     t.datetime "created_at", null: false

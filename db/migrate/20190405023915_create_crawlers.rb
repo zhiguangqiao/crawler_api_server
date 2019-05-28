@@ -1,8 +1,7 @@
 class CreateCrawlers < ActiveRecord::Migration[5.2]
   def change
     create_table :crawlers do |t|
-      t.string :expression
-      t.string :url
+      t.string :shell_command
       t.string :name
       t.string :desc
 
