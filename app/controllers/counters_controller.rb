@@ -1,9 +1,10 @@
 class CountersController < ApplicationController
   before_action :set_counter, only: [:show, :update, :destroy]
+  before_action :set_crawler, only: [:index]
 
   # GET /counters
   def index
-    @counters = Counter.all
+    @counters = @crawler.counters
 
     render json: @counters
   end
@@ -44,6 +45,9 @@ class CountersController < ApplicationController
       @counter = Counter.find(params[:id])
     end
 
+    def set_crawler
+      @crawler = Crawler.find(params[:crawler_id])
+    end
     # Only allow a trusted parameter "white list" through.
     def counter_params
       params.require(:counter).permit(:count, :crawler_id)
