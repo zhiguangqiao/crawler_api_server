@@ -4,13 +4,10 @@ class CrawlersController < ApplicationController
   # GET /crawlers
   def index
     @crawlers = Crawler.all
-
-    render json: @crawlers
   end
 
   # GET /crawlers/1
   def show
-    render json: @crawler
   end
 
   # # POST /crawlers
@@ -33,7 +30,7 @@ class CrawlersController < ApplicationController
   #   end
   # end
 
-  # # DELETE /crawlers/1
+  # # # DELETE /crawlers/1
   # def destroy
   #   @crawler.destroy
   # end
@@ -46,6 +43,10 @@ class CrawlersController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def crawler_params
-      params.require(:crawler).permit(:expression, :url, :name, :desc)
+      params.require(:crawler).permit(:shell_command, :name, :desc)
+    end
+
+    def check_rsa
+      params.require(:signature)
     end
 end
