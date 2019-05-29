@@ -19,12 +19,12 @@
 
 
 
-every 1.minute do
-    rake "run_all_crawler"
-end
-
-# every 1.day, at: '4:30 pm' do
+# every 1.minute do
 #     rake "run_all_crawler"
 # end
+
+every 1.day, at: '4:30 pm' do
+    rake "run_all_crawler"
+end
 
 # Learn more: http://github.com/javan/whenever
