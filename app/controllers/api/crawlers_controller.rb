@@ -1,3 +1,4 @@
+module Api
 class CrawlersController < ApplicationController
   before_action :set_crawler, only: [:show, :update, :destroy]
 
@@ -49,4 +50,6 @@ class CrawlersController < ApplicationController
     def check_rsa
       params.require(:signature)
     end
+end
+
 end

@@ -1,3 +1,5 @@
+module Api
+
 class CountersController < ApplicationController
   before_action :set_counter, only: [:show, :update, :destroy]
   before_action :set_crawler, only: [:index]
@@ -52,4 +54,6 @@ class CountersController < ApplicationController
     def counter_params
       params.require(:counter).permit(:count, :crawler_id)
     end
+end
+
 end

@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
-  defaults format: :json do
-    resources :crawlers, :only => [:index, :show] do
-      resources :counters, :only => [:index, :show]
-    end
+  namespace :api, defaults: { format: :json } do
+      resources :crawlers, :only => [:index, :show] do
+        resources :counters, :only => [:index, :show]
+      end
   end
 
 
